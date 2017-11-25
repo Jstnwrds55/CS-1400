@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 import java.util.List;
 import java.util.ArrayList;
 
-public class GradeCalculator {
+public class GradeCalculatorUI {
 
 
     // create a class for student information
