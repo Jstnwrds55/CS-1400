@@ -1,14 +1,27 @@
-import jdk.nashorn.internal.scripts.JO;
-
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.*;
 
 public class PaneFun {
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null, "Hey there");
-        String name = JOptionPane.showInputDialog(null, "Who are you?");
-        JOptionPane.showMessageDialog(null, "Hi " + name + ".");
-        int age = Integer.parseInt(JOptionPane.showInputDialog(null, "How old are you?"));
-        JOptionPane.showMessageDialog(null, "I am " + (18-age) + " years older than you");
-        JOptionPane.showConfirmDialog(null, "Are you happy with your life?");
+
+        JFrame homeScreen = new JFrame();
+
+        homeScreen.setSize(400, 200);
+        homeScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        homeScreen.setTitle("New Frame");
+        homeScreen.setLayout(new FlowLayout());
+
+
+        JLabel name = new JLabel("Enter your name: ");
+        JTextField txtName = new JTextField(20);
+        JButton okBtn = new JButton("OK");
+
+        homeScreen.add(name);
+        homeScreen.add(txtName);
+        homeScreen.add(okBtn);
+
+
+        homeScreen.setVisible(true);
+
     }
 }
